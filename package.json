@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Setting up my portfolio page to boost up my career as a Web Developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikolaCirisanovic/portfolio_nikolac.git"
+  },
+  "keywords": [
+    "Webdevelopment",
+    "Express",
+    "Nodejs",
+    "Portfolio",
+    "Bootstrap"
+  ],
+  "author": "Nikola Cirisanovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikolaCirisanovic/portfolio_nikolac/issues"
+  },
+  "homepage": "https://github.com/NikolaCirisanovic/portfolio_nikolac#readme",
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "express": "^4.17.1"
+  }
+}
