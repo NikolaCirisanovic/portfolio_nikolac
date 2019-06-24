@@ -1,5 +1,5 @@
 window.onload = () => {
-    axios.get('https://jsonplaceholder.typicode.com/users').then((res) => {
+    axios.get('http://localhost:3300/api/products').then((res) => {
         // Target the place in the DOM where I'm going to insert the data from API
         let ul = document.getElementById('users')
         let users = res.data
@@ -9,12 +9,12 @@ window.onload = () => {
         users.forEach(u => {
             ul.insertAdjacentHTML("afterbegin", `<div class="card" style="width: 18rem; margin:20px; display: inline-block">
             <div class="card-header"> 
-              Name: ${u.name}
+             ${u.name}
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">E-Mail: ${u.email}</li>
-              <li class="list-group-item">City: ${u.address.city}</li>
-              <li class="list-group-item">Zipcode: ${u.address.zipcode}</li>
+              <li class="list-group-item"> ${u.description}</li>
+              <li class="list-group-item">Price:${u.price}</li>
+              <li class="list-group-item">Color: ${u.color}</li>
             </ul>
           </div>`)
         });

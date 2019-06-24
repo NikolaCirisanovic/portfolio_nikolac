@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
 	console.log('__dirname', __dirname)
 })
 
+// API
+
+app.get('/api/products', require('./client/controllers/get_products.js'))
+
 
 // Run Server, execute the method to listen to requests on the specified port
 
