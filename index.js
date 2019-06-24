@@ -26,3 +26,6 @@ app.listen(process.env.PORT, () => {
 	
 })
 
+app.listen(3100, () => {
+	console.log('Server listening on localhost port 3100')
+})
