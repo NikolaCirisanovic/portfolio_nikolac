@@ -7,17 +7,19 @@ window.onload = () => {
         console.log(users)
         // Looping through each person and adding a bootstrap card for each person. Given name, email, city and zipcode
         users.forEach(u => {
-            ul.insertAdjacentHTML("afterbegin", `<div class="card" style="width: 18rem; margin:20px; display: inline-block">
-            <div class="card-header"> 
-             ${u.name}
+            ul.insertAdjacentHTML("afterbegin", `<div class="card" style="width: 18rem; display:inline-block">
+            <img class="card-img-top" src="${u.image}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">${u.name}</h5>
+              <p class="card-text">${u.description}</p>
             </div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item"> ${u.description}</li>
-              <li class="list-group-item">Price:${u.price}</li>
-              <li class="list-group-item">Color: ${u.color}</li>
+              <li class="list-group-item">${u.price}</li>
+              <li class="list-group-item">${u.color}</li>
             </ul>
           </div>`)
         });
     })
 
 }
+
