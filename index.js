@@ -4,6 +4,8 @@ const express = require('express')
 const path = require('path')
 const app = express()
 
+require('dotenv').config()
+
 // Serving every file inside of the client folder
 app.use(express.static(path.join(__dirname, 'client')))
 
@@ -14,12 +16,13 @@ app.get('/', (req, res) => {
 
 // API
 
-app.get('/api/products', require('./client/controllers/get_products.js'))
+app.get('/api/products', require('./client/controllers/get_products'))
 
 
 // Run Server, execute the method to listen to requests on the specified port
 
-app.listen(3300, () => {
-	console.log('Server listening on port 3300');
+app.listen(process.env.PORT, () => {
+	console.log(`Server listening on port ${process.env.PORT}`);
+	
 })
 
